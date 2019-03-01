@@ -3,6 +3,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "Servo_Control.hpp"
+<<<<<<< HEAD
+=======
+#include "constants.h"
+>>>>>>> mast/camera
 
 #ifndef PROTOPROJECT_H_
 #define PROTOPROJECT_H_
@@ -12,10 +16,18 @@ extern "C" {
 #endif
 
 struct ParamsStruct {
-    char name[40]; // test parameter
-    char mode[2]; // arm or manual control mode
-    double yaw_value; // y axis value of the gimbal
-    
+    char name[20]; // test parameter
+    char mode[20]; // debug, manual, or arm control mode based on "debug", "manual", or "arm" keywords 
+    int command_move; // changes the position of the gimbal manual, up, center, or down based on "0", "1", "2", or "3" respectively
+    double manual_move = 0; // manually changes the position of the gimbal based on a custom value between 37 and 63 position percent
+    double pitch_position = 0; // current y axis value of the gimbal
+};
+
+typedef enum CommandMoveMode {
+    MANUAL = 0,
+    UP = 1,
+    CENTER = 2, 
+    DOWN = 3,
 };
 
 void initServer(AsyncWebServer* server, ParamsStruct* params);
@@ -31,6 +43,20 @@ void Yaw_Set_Direction();
 =======
 void hello_world(char* name);
 >>>>>>> 5d340852f35a063e5b69c5386cf1335127fa695e
+
+void initGimbal(); // Initialize the servo object of the camera pitch
+
+void readIMU(); // Interprets values from the IMU underneath the gimbal
+
+void centerMovePitch(); // Rotates gimbal to the center
+
+void upMovePitch(); // Rotates gimbal to face the camera upwards
+
+void downMovePitch(); // Rotates gimbal to face the camera downwards
+
+void manualMovePitch(double percentage); // Interprets duty cycle percentages in order manually rotate the camera pitch
+
+void sweepMovePitch(); // Test function to make sure the gimbal works
 
 #ifdef _cplusplus
 }

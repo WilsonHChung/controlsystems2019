@@ -38,9 +38,15 @@ int EEPROMCount(int addr)
     return data;
 }
 
-void hello_world()
+void Camera_Init()
 {
-    printf("Hello, world!\n");
+    Servo yaw_servo(5, 0, 0, 50, 3.75, 11.25);
+    printf("Camera Has Been Initialized.\n");
+
+}
+
+void Yaw_Set_Direction() {
+    yaw_servo.SetPositionPercent(50);
 }
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -29,7 +29,6 @@ extern "C" void app_main()
 	esp_restart();
     }
 
-    xTaskCreate(vSayHelloTask, "Hello", 4096, NULL, 1, NULL);
-    xTaskCreate(vCountTask, "Count", 4096, NULL, 1, NULL);
+    xTaskCreate(vServoTask, "Servo", 4096, NULL, 1, NULL);
 
 }

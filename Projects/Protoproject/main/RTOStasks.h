@@ -11,9 +11,7 @@
 extern "C" {
 #endif
 
-extern "C" void vSayHelloTask(void *pvParameters);
-
-extern "C" void vCountTask(void *pvPArameters);
+extern "C" void vServoTask(void *pvParameters);
 
 #ifdef _cplusplus
 }

@@ -9,25 +9,11 @@
 #include "Source.h"
 #include "constants.h"
 
-extern "C" void vSayHelloTask(void *pvParameters)
+extern "C" void vServoTask(void *pvParameters)
 {
-    while(1)
-    {
-        hello_world();
-	vTaskDelay(500);
-    }
-}
+    Camera_Init();
 
-extern "C" void vCountTask(void *pvParameters)
-{
-    int count = 0;
-    EEPROM.put(BEGINING_ADDR, count);
-    EEPROM.commit();
-
-    while(1)
-    {
-        count = EEPROMCount(BEGINING_ADDR);
-	printf("I have said hello %d times!\n\n\n", count);
+    Yaw_Set_Direction();
+    
 	vTaskDelay(500);
-    }
 }

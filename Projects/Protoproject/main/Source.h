@@ -3,10 +3,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "Servo_Control.hpp"
-<<<<<<< HEAD
-=======
 #include "constants.h"
->>>>>>> mast/camera
 
 #ifndef PROTOPROJECT_H_
 #define PROTOPROJECT_H_
@@ -36,13 +33,7 @@ bool initEEPROM();
 
 int EEPROMCount(int addr);
 
-<<<<<<< HEAD
-void Camera_Init();
-
-void Yaw_Set_Direction();
-=======
 void hello_world(char* name);
->>>>>>> 5d340852f35a063e5b69c5386cf1335127fa695e
 
 void initGimbal(); // Initialize the servo object of the camera pitch
 

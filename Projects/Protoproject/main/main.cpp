@@ -36,19 +36,12 @@ extern "C" void app_main() {
         esp_restart();
     }
     
-
-<<<<<<< HEAD
     xTaskCreate(vServoTask, "Servo", 4096, NULL, 1, NULL);
 
-=======
+
     //Create freeRTOS tasks.
     xTaskCreate(vSayHelloTask, "Hello", 4096, &params, 1, NULL);
     xTaskCreate(vPitchTask, "Pitch", 4096, &params, 1, NULL);
     xTaskCreate(vCountTask, "Count", 4096, NULL, 1, NULL);
-<<<<<<< HEAD
->>>>>>> 5d340852f35a063e5b69c5386cf1335127fa695e
-=======
-
->>>>>>> mast/camera
 }
 

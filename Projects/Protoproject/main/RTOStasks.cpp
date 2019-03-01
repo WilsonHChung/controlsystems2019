@@ -10,17 +10,6 @@
 #include "constants.h"
 #include <string>
 
-<<<<<<< HEAD
-extern "C" void vServoTask(void *pvParameters)
-{
-    Camera_Init();
-
-    Yaw_Set_Direction();
-    
-	vTaskDelay(500);
-=======
-
-
 extern "C" void vSayHelloTask(void *pvParameters) {
     ParamsStruct* params = (ParamsStruct*) pvParameters;
 
@@ -111,5 +100,4 @@ extern "C" void vCountTask(void *pvParameters)
         printf("I have said hello %d times!\n\n\n", count);
         vTaskDelay(500);
     }
->>>>>>> 5d340852f35a063e5b69c5386cf1335127fa695e
 }

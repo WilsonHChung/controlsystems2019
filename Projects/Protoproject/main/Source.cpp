@@ -101,35 +101,12 @@ bool initEEPROM() {
     return status;    
 }
 
-int EEPROMCount(int addr)
-{
+int EEPROMCount(int addr) {
     int data = EEPROM.read(addr);
     data++;
     EEPROM.write(addr, data);
     EEPROM.commit();
     return data;
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-
-void Camera_Init()
-{
-    Servo yaw_servo(5, 0, 0, 50, 3.75, 11.25);
-    printf("Camera Has Been Initialized.\n");
-
-}
-
-void Yaw_Set_Direction() {
-    yaw_servo.SetPositionPercent(50);
-}
-
-////////////////////////////////////////////////////////////////////////////////
-//                               CODE ENDS HERE                               //
-////////////////////////////////////////////////////////////////////////////////
-=======
-}
->>>>>>> 5d340852f35a063e5b69c5386cf1335127fa695e
-=======
 }
 
 void initGimbal() {
@@ -176,4 +153,3 @@ void sweepMovePitch() {
     printf("Sweeping has been enabled.\n");
     
 }
->>>>>>> mast/camera

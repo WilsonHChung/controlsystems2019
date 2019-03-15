@@ -32,9 +32,9 @@ constexpr float SERVO_DOWN = 63; // Pitch duty cycle to rotate camera up
 
 constexpr float SERVO_UP = 37; // Pitch duty cycle to rotate camera down
 
-constexpr float SERVO_MIN = 2.5; // Constrained pitch min duty cycle
+constexpr float PITCH_SERVO_MIN = 2.5; // Constrained pitch min duty cycle
 
-constexpr float SERVO_MAX = 12.5; // Constrained pitch max duty cycle
+constexpr float PITCH_SERVO_MAX = 12.5; // Constrained pitch max duty cycle
 
 // Pitch Servo Variables //
 
